@@ -1,0 +1,137 @@
+body{
+    box-sizing: border-box;
+    background-color: #6a6868;
+}
+
+.container{
+    width: 15%;
+    height: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #292828;
+    border: 1px solid;
+    border-radius: 20%;
+}
+
+.inner{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    border-radius: 10%;
+    border: 1px solid;
+    overflow: hidden;
+   
+}
+
+.hatch{
+    width: 100%;
+    height: 15%;
+    position: absolute;
+   
+    border-radius: 50%;
+    background-color: #333;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom-hatch{
+    top: 0;
+}
+
+.top-hatch{
+    bottom: 0;
+}
+
+.walls{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:  linear-gradient(0.75turn, #00000082, #3333337a, #706c6c83, #eeeeee83, #706c6c83 ,#3333337a, #00000082);
+}
+
+.class{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: linear-gradient(0.75turn, rgba(124, 124, 240, 0.322), #eeeeee57 , rgba(124, 124, 240, 0.322));
+}
+
+.portal{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(0.75turn,#333, #706c6c, #eee ,#706c6c, #333);
+    border-radius: 50%;
+    
+
+    animation-name: open-close;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.portal-top{
+    top: 0;
+  
+}
+
+.portal-bottom{
+    bottom: 0;
+    animation-delay: 1.5s;
+}
+
+@keyframes open-close {
+    from {
+      width: 0;
+      height: 0;
+    }
+    50%{
+        width: 95%;
+        height: 14%;
+    }
+    to{
+        width: 0;
+        height: 0;
+    }
+}
+
+.boll{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background: linear-gradient(rgb(106, 45, 210), rgb(62, 60, 60) 30% 70%, rgb(106, 45, 210));
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    animation-name: fall, fall;
+    animation-duration: 2s, 4s;
+    animation-delay: 1s, 4s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+    font-size: calc(4px + (65 * 0.4) * (100vw - 50px) / 1440);
+}
+
+@keyframes fall{
+    from{
+        top: -100%
+    }
+    to{
+        top: 100%;
+    }
+}
