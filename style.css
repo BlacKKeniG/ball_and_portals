@@ -137,6 +137,7 @@ body{
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     visibility: hidden;
+    text-shadow: 2px 2px 2px rgb(106, 45, 210);
 }
 
 
